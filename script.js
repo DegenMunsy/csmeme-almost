@@ -1,9 +1,3 @@
-var fontSizeSelect = document.getElementById("font-size-select");
-fontSizeSelect.addEventListener("change", function() {
-    var selectedSize = fontSizeSelect.value;
-    ctx.font = selectedSize + "px Impact";
-});
-
 function previewImage() {
     var file = document.getElementById("image-input").files[0];
     var reader = new FileReader();
@@ -28,8 +22,7 @@ function addMemeText() {
     canvas.height = img.height;
 
     ctx.drawImage(img, 0, 0);
-    var selectedSize = fontSizeSelect.value;
-    ctx.font = selectedSize + "px Impact";
+    ctx.font = "30px Impact";
     ctx.textAlign = "center";
     ctx.fillStyle = "white";
     ctx.strokeStyle = "black";
